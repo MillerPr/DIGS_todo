@@ -1,3 +1,6 @@
+# DIGS To Do App Tutorial
+Inspired by the [YouTube tutorial](https://youtu.be/uOI77E8Y95Q?si=sUcfO3MpCWdhPlOJ) by Joy of Code, this tutorial makes a number of changes to his code to more broadly introduce Svelte, SveltKit, and Shadcn.
+
 # sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
