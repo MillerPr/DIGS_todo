@@ -40,7 +40,7 @@
     url = `${url}&${queryString}`;
     //console.log(url)
 
-    // Fetch
+    // Fetch, is there a better way to do this?
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -70,6 +70,7 @@
   }
 
   // Can this be $derived?
+  // Fix logic to handle results without valid images.
   async function wikiImage(pageid: string){
     let sourceString: string
     let url: string = `https://en.wikipedia.org/w/api.php?origin=*&action=query&prop=pageimages&pageids=${pageid}&pithumbsize=100&format=json`
