@@ -3,11 +3,11 @@
   import { Input } from "$lib/components/ui/input/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
 // Create a store to hold the todos and provide two sample todos
+  type Todo = {text: string; done: boolean};
   let todos = $state<Todo[]>([])
+  type Filters = (typeof filterVals)[number];
   let filter = $state<Filters>('all')
   const filterVals = ['all', 'active', 'completed']
-  type Filters = (typeof filterVals)[number];
-  type Todo = {text: string; done: boolean};
 
   $inspect(todos);
 

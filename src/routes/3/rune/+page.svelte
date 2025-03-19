@@ -38,10 +38,10 @@
     todos.filter(todo => todo.done);
   }
 
-  function taskCount(){
-    return todos.filter(todo => !todo.done).length === 0 ? 'All clear' :
-    todos.filter(todo => !todo.done).length;
-  }
+  let taskCount = $derived(
+    todos.filter(todo => !todo.done).length === 0 ? 'All clear' :
+    todos.filter(todo => !todo.done).length
+);
 </script>
 
 <h1>DIGS To Do App -- Third Step</h1>
@@ -51,7 +51,7 @@
   {/each}
 </div>
 <div class="py-4">
-  Number of incomplete tasks: {taskCount()}
+  Number of incomplete tasks: {taskCount}
 </div>
 <div class="flex items-center space-x-2 max-w-xs py-1">
   <Input placeholder="Add a new task..." onkeydown={addTask}/>

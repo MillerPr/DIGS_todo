@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Leaf, House, Lightbulb, Palette, Pyramid, Star } from "lucide-svelte";
+  import { Leaf, House, Lightbulb, Palette, Pyramid, Star, Squircle } from "lucide-svelte";
   import * as Sidebar from "$lib/components/ui/sidebar/index.js";
 
  // Menu items.
@@ -34,10 +34,15 @@
    url: "5",
    icon: Star,
   },
+  {
+    title: "Wiki",
+    url: "wiki",
+    icon: Squircle
+  }
  ];
 </script>
 
-<Sidebar.Root>
+<Sidebar.Root collapsible="icon">
  <Sidebar.Content>
   <Sidebar.Group>
    <Sidebar.GroupLabel>DIGS To Do App</Sidebar.GroupLabel>

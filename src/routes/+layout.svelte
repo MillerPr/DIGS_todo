@@ -10,7 +10,9 @@
 <Sidebar.Provider>
   <AppSidebar />
   <main>
-    <Sidebar.Trigger />
-    {@render children?.()}
+    <div class="px-4">
+      <Sidebar.Trigger />
+      {@render children?.()}
+    </div>
   </main>
 </Sidebar.Provider>
